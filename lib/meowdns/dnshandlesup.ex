@@ -1,4 +1,4 @@
-defmodule Meowdns.Dnshandlesup do
+defmodule Meowdns.Dnshandle.Supervisor do
   use Supervisor.Behaviour
 
   def start_link(nworkers) do

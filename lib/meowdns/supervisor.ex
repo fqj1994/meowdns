@@ -8,7 +8,7 @@ defmodule Meowdns.Supervisor do
   def init([port, nworkers]) do
     children = [
       worker(Meowdns.Udpserver, [port]),
-      supervisor(Meowdns.Dnshandlesup, [nworkers])
+      supervisor(Meowdns.Dnshandle.Supervisor, [nworkers])
     ]
 
     # See http://elixir-lang.org/docs/stable/Supervisor.Behaviour.html
